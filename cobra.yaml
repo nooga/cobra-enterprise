@@ -3,6 +3,11 @@ namespace: cobra
 db:
   defines: runnable
   inherits: mongodb/mongodb
+  variables:
+    mongo-init-extra-args:
+      type: string
+      env: MONGO_INITDB_EXTRA_ARGS
+      value: "--authenticationDatabase admin"
 
 enterprise:
   defines: runnable

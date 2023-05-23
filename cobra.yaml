@@ -18,7 +18,7 @@ enterprise:
     publisher: nooga
   containers:
     app:
-      image: "docker.io/nooga/cobra-enterprise:latest"
+      build: .
       environment:
         - <- `DB_HOST=` connection-hostname("mongodb") concat
         - <- `DB_PORT=` connection-port("mongodb") concat
